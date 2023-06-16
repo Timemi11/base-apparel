@@ -151,7 +151,7 @@ body{
     }
 
   .container{
-    position: relative;
+    position: absolute;
     background: linear-gradient($degree,$white,$whitegray);
     background-image: url("/images/bg-pattern-desktop.svg");
     background-position:  500px;
