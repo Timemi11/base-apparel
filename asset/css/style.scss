@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import "color.scss";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-size: $fontSize16;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+@media screen and (width <= 767px){
+// Card 
+.container{
+    position: relative;
+    background: linear-gradient($degree,$white,$whitegray);
+    overflow-x: hidden;
+    height: 100%;
+    & .logo{
+        background-image: url("/images/logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width:100%;
+        height:20px;
+        margin: 1.5rem 2rem;
+    }   
+    & .image{
+        position: absolute;
+        background-image: url("/images/hero-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 510px;
+        width: 100% !important;
+        top: 70px;
+    }
+    
+    & .content{
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        margin-top: 530px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        @media screen and (max-width:760px) {
+            margin-top: 515px !important;
+        }
+        @media screen and (max-width:600px) {
+            margin-top: 415px !important;
+        }
+        @media screen and (max-width:421px) {
+            margin-top: 345px !important;
+        }
+        @media screen and (max-width:396px) {
+            margin-top: 325px !important;
+        }
+        @media screen and (max-width:376px) {
+            margin-top: 305px !important;
+        }
+        @media screen and (max-width:361px) {
+            margin-top: 285px !important;
+        }
+       
+        & h1{
+            text-transform: uppercase;
+            font-size: 36px;
+            width: 100%;
+            font-weight: 400;
+            letter-spacing: 10px;
+            & pre:nth-child(1){
+                color: $DesaturatedRed;
+                font-weight: 300;
+            }
+        }
+        & p{
+            padding: 1.5rem 2rem;
+            color: $DesaturatedRed;
+        }
+        & .formsubmit{
+            position: relative;
+            width: 300px;
+            & input{
+                max-width: 300px;
+                width: 100%;
+                padding: 0.6rem 1rem;
+                border-radius: 2rem;
+                border: 1px solid rgba($DarkGrayishRed,.2);
+                outline: none;
+                &:focus
+                {
+                    border: 1px solid $DarkGrayishRed;
+                }
+                &::placeholder{
+                    color: rgba($DarkGrayishRed,.2);
+                }
+
+            }
+            & .error-icon{
+                display: none;
+                position: absolute;
+                right: 80px;
+                top: 9px;
+                background-image: url("/images/icon-error.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+            }
+            & button{
+                position: absolute;
+                top: -2px;
+                right: 0px;
+                background: linear-gradient($degree,$pink,$pinkred);
+                padding: 0.6rem 1.8rem;
+                border-radius: 3rem;
+                border:none;
+                text-align: center;
+                width: 70px;
+                height: 40px;
+                &::after{
+                    content: url("/images/icon-arrow.svg");
+                }
+                &:hover{
+                    opacity: .8;
+                    cursor: pointer;
+                }
+            }
+            & .success-message{
+                display: none;
+                color:#008000;
+            }
+            & .error-message{
+                display: none;
+                color: $SoftRed;
+            }
+        }
+    }
+}
+// End Card    
+}
+
+@media screen and ( min-width:768px ){
+  .container{
+    position: relative;
+    background: linear-gradient($degree,$white,$whitegray);
+    overflow: hidden;
+    max-height: 480px;
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    & .logo{
+        background-image: url("/images/logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width:100%;
+        height:20px;
+        margin: 1.5rem 2rem;
+    }   
+    & .image{
+        position: absolute;
+        background-image: url("/images/hero-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 100% !important;
+        right: -440px;
+        top:0;
+    }
+    
+    & .content{
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        @media screen and (max-width:760px) {
+            margin-top: 0;
+        }
+        @media screen and (max-width:600px) {
+            margin-top: 0
+        }
+        @media screen and (max-width:421px) {
+            margin-top: 0
+        }
+        @media screen and (max-width:396px) {
+            margin-top: 0
+        }
+        @media screen and (max-width:376px) {
+            margin-top: 0
+        }
+        @media screen and (max-width:361px) {
+            margin-top: 0
+        }
+        & h1{
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 36px;
+            width: 100%;
+            font-weight: 400;
+            letter-spacing: 10px;
+            padding: 1.5rem 2rem;
+            & pre:nth-child(1){
+                color: $DesaturatedRed;
+                font-weight: 300;
+            }
+        }
+        & p{
+            text-align: left;
+            padding: 1.5rem 2rem;
+            color: $DesaturatedRed;
+        }
+        & .formsubmit{
+            position: relative;
+            width: 300px;
+            left: -220px;
+            & input{
+                max-width: 300px;
+                width: 100%;
+                padding: 0.6rem 1rem;
+                border-radius: 2rem;
+                border: 1px solid rgba($DarkGrayishRed,.2);
+                outline: none;
+                &:focus
+                {
+                    border: 1px solid $DarkGrayishRed;
+                }
+                &::placeholder{
+                    color: rgba($DarkGrayishRed,.2);
+                }
+
+            }
+            & .error-icon{
+                display: none;
+                position: absolute;
+                right: 80px;
+                top: 9px;
+                background-image: url("/images/icon-error.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+            }
+            & button{
+                position: absolute;
+                top: -2px;
+                right: 0px;
+                background: linear-gradient($degree,$pink,$pinkred);
+                padding: 0.6rem 1.8rem;
+                border-radius: 3rem;
+                border:none;
+                text-align: center;
+                width: 70px;
+                height: 40px;
+                &::after{
+                    content: url("/images/icon-arrow.svg");
+                }
+                &:hover{
+                    opacity: .8;
+                    cursor: pointer;
+                }
+            }
+            & .success-message{
+                display: none;
+                color:#008000;
+                font-size: 12px;
+            }
+            & .error-message{
+                display: none;
+                position: relative;
+                inset: -10px 0 0 -10px;
+                font-size: 12px;
+                color: $SoftRed;
+            }
+        } 
+    }
+    }
+}
+
